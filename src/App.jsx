@@ -11,7 +11,7 @@ const [status,setstatus]=useState(false)
 const [emaillist,setEmaillist]=useState([])
 function send(){
   setstatus(true)
-axios.post("http://localhost:5000/sendmail",{msg:message, emaillist:emaillist}).then((data)=>{
+axios.post("https://bulkmail-backend-tgbb.onrender.com/sendmail",{msg:message, emaillist:emaillist}).then((data)=>{
   if(data.data){
     alert("Email sent sucessfully")
     setstatus(false)
